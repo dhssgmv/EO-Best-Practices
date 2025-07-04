@@ -1,0 +1,1220 @@
+{
+  "version": "1.0.0",
+  "layout": {
+    "navigation": {
+      "logo": "https://www.esa.int/extension/pillars/design/pillars/images/ESA_Logo.svg",
+      "title": "EOBPs - Road and Rail (1)"
+    }
+  },
+  "interfaceGroups": [
+    "Flood Exposure: Return Period Analysis",
+    "Flood Hazard Map - Frequency Analysis for Entire Italy",
+    "Flood Hazard Map - Frequency Analysis for Po Basin",
+    "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+    "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+    "Ground Movement Risk Map - Sicily",
+    "Ground Movement Risk Map - Selected Regions in Sicily"
+  ],
+  "exclusivitySets": [],
+  "services": [],
+  "sources": [
+    {
+      "name": "© OpenStreetMap contributors © CARTO",
+      "isActive": true,
+      "data": [
+        {
+          "url": "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+          "format": "xyz",
+          "zIndex": 0
+        }
+      ],
+      "isBaseLayer": true,
+      "meta": {
+        "description": "Auto-generated description for Open Street Map",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
+        "categories": [
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Basemaps"
+      }
+    },
+    {
+      "name": "Flood Exposure - 10 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_10yrRP_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": [
+                "match",
+                ["get", "Flood_Clas"],
+                0.0, "rgba(255, 255, 255, 0.4)",
+                1.0, "rgba(200, 255, 200, 0.8)",
+                2.0, "rgba(150, 225, 150, 0.8)",
+                3.0, "rgba(255, 255, 150, 0.8)",
+                4.0, "rgba(255, 200, 100, 0.8)",
+                5.0, "rgba(255, 100, 100, 0.8)",
+                "rgba(200, 200, 200, 0.6)"
+              ],
+              "stroke-color": "rgba(40, 40, 40, 1.0)",
+              "stroke-width": 0.5
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on flood depth (m) expected for a 10-year return period, meaning there is a 10% chance of exceeding a predefined flood level in any given year. The analysis is based on hydrological and hydrodynamic models from JRC.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_10yrRP_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale ",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": [
+              {
+                "color": "rgba(255, 255, 255, 0.4)",
+                "label": "0 - No risk"
+              },
+              {
+                "color": "rgba(200, 255, 200, 0.8)",
+                "label": "1 - Very low risk"
+              },
+              {
+                "color": "rgba(150, 225, 150, 0.8)",
+                "label": "2 - Low risk"
+              },
+              {
+                "color": "rgba(255, 255, 150, 0.8)",
+                "label": "3 - Moderate risk"
+              },
+              {
+                "color": "rgba(255, 200, 100, 0.8)",
+                "label": "4 - High risk"
+              },
+              {
+                "color": "rgba(255, 100, 100, 0.8)",
+                "label": "5 - Very high risk"
+              }
+      ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          },
+          "legend": {
+            "type": "swatch"
+          }
+        }
+      }
+    },
+    {
+      "name": "Flood Exposure - 50 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_50yrRP_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  within a 100m buffer along the railway lines, based on flood depth (m) expected for a 50-year return period, meaning there is a 2% chance of exceeding a predefined flood level in any given year. The analysis is based on hydrological and hydrodynamic models from JRC.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_50yrRP_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale ",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Flood Exposure - 100 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_100yrRP_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  within a 100m buffer along the railway lines, based on flood depth (m) expected for a 100-year return period, meaning there is a 1% chance of exceeding that flood level in any given year. The analysis is based on hydrological and hydrodynamic models from JRC.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_100yrRP_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale ",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Flood Exposure - 500 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_500yrRP_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  within a 100m buffer along the railway lines, based on flood depth (m) expected for a 500-year return period, meaning there is a 0.2% chance of exceeding a predefined flood level in any given year. The analysis is based on hydrological and hydrodynamic models from JRC.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_500yrRP_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale ",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Use Land Cover Map",
+      "isActive": false,
+      "meta": {
+        "description": "Land Cover inventory for 44 thematic classes for the 2018 reference year.",
+        "attribution": {
+          "text": "CORINE",
+          "url": "https://land.copernicus.eu/en/products/corine-land-cover/clc2018"
+        },
+        "categories": [
+          {
+            "color": "#E6004D",
+            "label": "11 - Urban fabric",
+            "value": 11
+          },
+          {
+            "color": "#FF0000",
+            "label": "12 - Industrial, commercial, transport units",
+            "value": 12
+          },
+          {
+            "color": "#CC4DF2",
+            "label": "13 - Mine, dump and construction sites",
+            "value": 13
+          },
+          {
+            "color": "#FFB3CC",
+            "label": "14 - Artificial, non-agricultural vegetated areas",
+            "value": 14
+          },
+          {
+            "color": "#FFFF00",
+            "label": "21 - Arable land",
+            "value": 21
+          },
+          {
+            "color": "#E6B800",
+            "label": "22 - Permanent crops",
+            "value": 22
+          },
+          {
+            "color": "#B3B300",
+            "label": "23 - Pastures",
+            "value": 23
+          },
+          {
+            "color": "#80FF00",
+            "label": "24 - Heterogeneous agricultural areas",
+            "value": 24
+          },
+          {
+            "color": "#008000",
+            "label": "31 - Forests",
+            "value": 31
+          },
+          {
+            "color": "#00CC99",
+            "label": "32 - Scrub and/or herbaceous vegetation associations",
+            "value": 32
+          },
+          {
+            "color": "#CCE6CC",
+            "label": "33 - Open spaces with little or no vegetation",
+            "value": 33
+          },
+          {
+            "color": "#4D4DFF",
+            "label": "41 - Inland wetlands",
+            "value": 41
+          },
+          {
+            "color": "#9999FF",
+            "label": "42 - Maritime wetlands",
+            "value": 42
+          },
+          {
+            "color": "#0000FF",
+            "label": "51 - Inland waters",
+            "value": 51
+          },
+          {
+            "color": "#0066CC",
+            "label": "52 - Marine waters",
+            "value": 52
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Corine_LULC_Italy.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Hazard Map - VIRIS",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_VIIRS_Frequency_Railways_Buf100m_Italy_merge.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the flood risk category within a 100m buffer along the railway lines, determined by the frequency (%) of the intersecting pixels detected as flooded across all 5-day composite VIIRS images from Jan 2012 to Dec 2024, reflecting how often those pixels appeared flooded compared to the total number of images.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_VIIRS_Frequency_Railways_Buf100m_Italy_merge.geojson",
+        "attribution": {
+          "text": "NOAA Satellite Proving Ground Global Flood Products Archive",
+          "url": "https://jpssflood.gmu.edu/ "
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Entire Italy",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Use Land Cover Map",
+      "isActive": false,
+      "meta": {
+        "description": "Land Cover inventory for 44 thematic classes for the 2018 reference year.",
+        "attribution": {
+          "text": "CORINE",
+          "url": "https://land.copernicus.eu/en/products/corine-land-cover/clc2018"
+        },
+        "categories": [
+          {
+            "color": "#E6004D",
+            "label": "11 - Urban fabric",
+            "value": 11
+          },
+          {
+            "color": "#FF0000",
+            "label": "12 - Industrial, commercial, transport units",
+            "value": 12
+          },
+          {
+            "color": "#CC4DF2",
+            "label": "13 - Mine, dump and construction sites",
+            "value": 13
+          },
+          {
+            "color": "#FFB3CC",
+            "label": "14 - Artificial, non-agricultural vegetated areas",
+            "value": 14
+          },
+          {
+            "color": "#FFFF00",
+            "label": "21 - Arable land",
+            "value": 21
+          },
+          {
+            "color": "#E6B800",
+            "label": "22 - Permanent crops",
+            "value": 22
+          },
+          {
+            "color": "#B3B300",
+            "label": "23 - Pastures",
+            "value": 23
+          },
+          {
+            "color": "#80FF00",
+            "label": "24 - Heterogeneous agricultural areas",
+            "value": 24
+          },
+          {
+            "color": "#008000",
+            "label": "31 - Forests",
+            "value": 31
+          },
+          {
+            "color": "#00CC99",
+            "label": "32 - Scrub and/or herbaceous vegetation associations",
+            "value": 32
+          },
+          {
+            "color": "#CCE6CC",
+            "label": "33 - Open spaces with little or no vegetation",
+            "value": 33
+          },
+          {
+            "color": "#4D4DFF",
+            "label": "41 - Inland wetlands",
+            "value": 41
+          },
+          {
+            "color": "#9999FF",
+            "label": "42 - Maritime wetlands",
+            "value": 42
+          },
+          {
+            "color": "#0000FF",
+            "label": "51 - Inland waters",
+            "value": 51
+          },
+          {
+            "color": "#0066CC",
+            "label": "52 - Marine waters",
+            "value": 52
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Entire Italy",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Corine_LULC_Italy.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Hazard Map - VIRIS & Sentinel-1",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_VIIRS-S2_Frequency_Railways_Buf100m_Italy_merge.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the flood risk category within a 100m buffer along the railway lines, determined by the frequency (%) of the intersecting pixels detected as flooded across all 5-day composite VIIRS images from Jan 2012 to Dec 2024 and Sentinel-1 imagery, reflecting how often those pixels appeared flooded compared to the total number of images.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/FloodExposure_VIIRS-S2_Frequency_Railways_Buf100m_Italy_merge.geojson",
+        "attribution": {
+          "text": "NOAA Satellite Proving Ground Global Flood Products Archive & Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Po Basin",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Use Land Cover Map",
+      "isActive": false,
+      "meta": {
+        "description": "Land Cover inventory for 44 thematic classes for the 2018 reference year.",
+        "attribution": {
+          "text": "CORINE",
+          "url": "https://land.copernicus.eu/en/products/corine-land-cover/clc2018"
+        },
+        "categories": [
+          {
+            "label": "11 - Urban fabric",
+            "color": "#E6004D",
+            "value": 11
+          },
+          {
+            "label": "12 - Industrial, commercial, transport units",
+            "color": "#FF0000",
+            "value": 12
+          },
+          {
+            "label": "13 - Mine, dump and construction sites",
+            "color": "#CC4DF2",
+            "value": 13
+          },
+          {
+            "label": "14 - Artificial, non-agricultural vegetated areas",
+            "color": "#FFB3CC",
+            "value": 14
+          },
+          {
+            "label": "21 - Arable land",
+            "color": "#FFFF00",
+            "value": 21
+          },
+          {
+            "label": "22 - Permanent crops",
+            "color": "#E6B800",
+            "value": 22
+          },
+          {
+            "label": "23 - Pastures",
+            "color": "#B3B300",
+            "value": 23
+          },
+          {
+            "label": "24 - Heterogeneous agricultural areas",
+            "color": "#80FF00",
+            "value": 24
+          },
+          {
+            "label": "31 - Forests",
+            "color": "#008000",
+            "value": 31
+          },
+          {
+            "label": "32 - Scrub and/or herbaceous vegetation associations",
+            "color": "#00CC99",
+            "value": 32
+          },
+          {
+            "label": "33 - Open spaces with little or no vegetation",
+            "color": "#CCE6CC",
+            "value": 33
+          },
+          {
+            "label": "41 - Inland wetlands",
+            "color": "#4D4DFF",
+            "value": 41
+          },
+          {
+            "label": "42 - Maritime wetlands",
+            "color": "#9999FF",
+            "value": 42
+          },
+          {
+            "label": "51 - Inland waters",
+            "color": "#0000FF",
+            "value": 51
+          },
+          {
+            "label": "52 - Marine waters",
+            "color": "#0066CC",
+            "value": 52
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Po Basin",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Corine_LULC_Italy.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 90th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_90th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category within a 100m buffer along the railway lines, based on the 90th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_90th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 95th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_95th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category within a 100m buffer along the railway lines, based on the 95th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_95th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 99th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_99th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category within a 100m buffer along the railway lines, based on the 99th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_no_days_gt_20mm_99th_1950-2019_classes_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 5 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_5_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on daily rainfall amount (mm) expected for a 5-year return period, meaning there is a 20% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_5_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 10 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_10_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on daily rainfall amount (mm) expected for a 10-year return period, meaning there is a 10% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_10_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 20 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_20_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on daily rainfall amount (mm) expected for a 20-year return period, meaning there is a 5% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_20_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 50 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_50_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on daily rainfall amount (mm) expected for a 50-year return period, meaning there is a 2% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_50_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 100 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_100_Railways_Buf100m_Italy.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer along the railway lines, based on daily rainfall amount (mm) expected for a 100-year return period, meaning there is a 1% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/ExtremePrecipitationRisk_max-1day_return_period_1950-2019_classes_return_period_100_Railways_Buf100m_Italy.geojson",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Daily Rainfall Return Period Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_subsidence_lower0_veloc_Sicily.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across the railway lines in Sicily, Italy. The analysis is based on ground motion velocity data provided by the European Ground Motion Service (EGMS).\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_subsidence_lower0_veloc_Sicily.geojson",
+        "attribution": {
+          "text": "EGMS",
+          "url": "https://land.copernicus.eu/en/products/european-ground-motion-service"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_landslides_lower0_veloc_Sicily.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across the railway lines in Sicily, Italy. The analysis is based on ground motion velocity data provided by the European Ground Motion Service (EGMS).\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_landslides_lower0_veloc_Sicily.geojson",
+        "attribution": {
+          "text": "EGMS",
+          "url": "https://land.copernicus.eu/en/products/european-ground-motion-service"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 1)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb1_slope_le10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across the railway lines of small region (Region-1) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb1_slope_le10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 1)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb1_slope_gt10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across the railway lines of small region (Region-1) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb1_slope_gt10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 2)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb2_slope_le10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across the railway lines of small region (Region-2) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb2_slope_le10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 2)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb2_slope_gt10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes less than 10% across the railway lines of small region (Region-2) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb2_slope_gt10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 3)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb3_slope_le10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across the railway lines of small region (Region-3) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb3_slope_le10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 3)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb3_slope_gt10.geojson",
+          "format": "geojson",
+          "zIndex": 1,
+          "style": [
+            {
+              "fill-color": "rgba(0, 0, 255, 0.6)"
+            },
+            {
+              "stroke-color": "rgba(0, 0, 255, 1.0)",
+              "stroke-width": 2
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across the railway lines of small region (Region-3) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Railway_GroundMovementRisk_velocity_3857_pb3_slope_gt10.geojson",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Selected Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    }
+  ]
+}
