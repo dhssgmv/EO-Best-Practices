@@ -1,0 +1,1164 @@
+{
+  "version": "1.0.0",
+  "layout": {
+    "navigation": {
+      "logo": "https://www.esa.int/extension/pillars/design/pillars/images/ESA_Logo.svg",
+      "title": "EOBPs - Road and Rail (2)"
+    }
+  },
+  "interfaceGroups": [
+    "Flood Exposure: Return Period Analysis",
+    "Flood Hazard Map - Frequency Analysis for Entire Italy",
+    "Flood Hazard Map - Frequency Analysis for Po Basin",
+    "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+    "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+    "Ground Movement Risk Map - Sicily",
+    "Ground Movement Risk Map - Seelcted Regions in Sicily"
+  ],
+  "exclusivitySets": [],
+  "services": [],
+  "sources": [
+    {
+      "name": "(c) Open Street Map contributors (c) CARTO",
+      "isActive": true,
+      "isBaseLayer": true,
+      "data": [
+        {
+          "url": "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+          "format": "xyz",
+          "zIndex": 0
+        }
+      ],
+      "meta": {
+        "description": "Auto-generated description for Open Street Map",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
+        "categories": []
+      }
+    },
+    {
+      "name": "Flood Exposure - 10 Years Return Period",
+      "isActive": false,
+      "meta": {
+        "description": "The layer shows the risk category across Italy, based on flood depth (m) expected for a 10-year return period, meaning there is a 10% chance of exceeding a predefined flood level in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP10_filled_depth_reclassified_reprojected.tif",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": [
+          {
+            "color": "#FFFFFF",
+            "label": "No Risk",
+            "value": 0
+          },
+          {
+            "color": "#FFFFB2",
+            "label": "Very Low Risk",
+            "value": 1
+          },
+          {
+            "color": "#FECC5C",
+            "label": "Low Risk",
+            "value": 2
+          },
+          {
+            "color": "#FD8D3C",
+            "label": "Moderate Risk",
+            "value": 3
+          },
+          {
+            "color": "#F03B20",
+            "label": "High Risk",
+            "value": 4
+          },
+          {
+            "color": "#BD0026",
+            "label": "Very High Risk",
+            "value": 5
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP10_filled_depth_reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Exposure - 50 Years Return Period",
+      "isActive": false,
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on flood depth (m) expected for a 50-year return period, meaning there is a 2% chance of exceeding a predefined flood level in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP50_filled_depth_reclassified_reprojected.tif",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": [
+          {
+            "color": "#FFFFFF",
+            "label": "No Risk",
+            "value": 0
+          },
+          {
+            "color": "#FFFFB2",
+            "label": "Very Low Risk",
+            "value": 1
+          },
+          {
+            "color": "#FECC5C",
+            "label": "Low Risk",
+            "value": 2
+          },
+          {
+            "color": "#FD8D3C",
+            "label": "Moderate Risk",
+            "value": 3
+          },
+          {
+            "color": "#F03B20",
+            "label": "High Risk",
+            "value": 4
+          },
+          {
+            "color": "#BD0026",
+            "label": "Very High Risk",
+            "value": 5
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP50_filled_depth_reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Exposure - 100 Years Return Period",
+      "isActive": false,
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on flood depth (m) expected for a 100-year return period, meaning there is a 1% chance of exceeding that flood level in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP100_filled_depth_reclassified_reprojected.tif",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": [
+          {
+            "color": "#FFFFFF",
+            "label": "No Risk",
+            "value": 0
+          },
+          {
+            "color": "#FFFFB2",
+            "label": "Very Low Risk",
+            "value": 1
+          },
+          {
+            "color": "#FECC5C",
+            "label": "Low Risk",
+            "value": 2
+          },
+          {
+            "color": "#FD8D3C",
+            "label": "Moderate Risk",
+            "value": 3
+          },
+          {
+            "color": "#F03B20",
+            "label": "High Risk",
+            "value": 4
+          },
+          {
+            "color": "#BD0026",
+            "label": "Very High Risk",
+            "value": 5
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP100_filled_depth_reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Exposure - 500 Years Return Period",
+      "isActive": false,
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on flood depth (m) expected for a 500-year return period, meaning there is a 0.2% chance of exceeding a predefined flood level in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP500_filled_depth_reclassified_reprojected.tif",
+        "attribution": {
+          "text": "River Flood Hazard Maps at European and Global Scale",
+          "url": "https://data.jrc.ec.europa.eu/collection/id-0054"
+        },
+        "categories": [
+          {
+            "color": "#FFFFFF",
+            "label": "No Risk",
+            "value": 0
+          },
+          {
+            "color": "#FFFFB2",
+            "label": "Very Low Risk",
+            "value": 1
+          },
+          {
+            "color": "#FECC5C",
+            "label": "Low Risk",
+            "value": 2
+          },
+          {
+            "color": "#FD8D3C",
+            "label": "Moderate Risk",
+            "value": 3
+          },
+          {
+            "color": "#F03B20",
+            "label": "High Risk",
+            "value": 4
+          },
+          {
+            "color": "#BD0026",
+            "label": "Very High Risk",
+            "value": 5
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Exposure: Return Period Analysis",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Europe_RP500_filled_depth_reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Hazard Map - VIRIS",
+      "isActive": false,
+      "meta": {
+        "description": "The layer shows the flood risk category across Italy, determined by the frequency (%) of the intersecting pixels detected as flooded across all 5-day composite VIIRS images from Jan 2012 to Dec 2024, reflecting how often those pixels appeared flooded compared to the total number of images.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Final_FREQ_Reclassified_reprojected.tif",
+        "attribution": {
+          "text": "NOAA Satellite Proving Ground Global Flood Products Archive",
+          "url": "https://jpssflood.gmu.edu/"
+        },
+        "categories": [
+          {
+            "label": "0",
+            "color": "#FFFFFF",
+            "value": 0
+          },
+          {
+            "label": "1",
+            "color": "#E47207",
+            "value": 1
+          },
+          {
+            "label": "2",
+            "color": "#E41111",
+            "value": 2
+          },
+          {
+            "label": "3",
+            "color": "#000000",
+            "value": 3
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Entire Italy",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Final_FREQ_Reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "name": "Flood Hazard Map - VIRIS & Sentinel-1",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Combined_Reclassified_reprojected.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the flood risk category across Italy, determined by the frequency (%) of the intersecting pixels detected as flooded across all 5-day composite VIIRS images from Jan 2012 to Dec 2024 and Sentinel-1 imagery, reflecting how often those pixels appeared flooded compared to the total number of images.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Combined_Reclassified_reprojected.tif",
+        "attribution": {
+          "text": "NOAA Satellite Proving Ground Global Flood Products Archive & Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "No Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Flood Hazard Map - Frequency Analysis for Po Basin",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 90th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_90th_1950-2019_classes_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category across Italy, based on the 90th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_90th_1950-2019_classes_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 183, 81)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(244, 86, 41)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Very High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 95th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_95th_1950-2019_classes_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category across Italy, based on the 95th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_95th_1950-2019_classes_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 183, 81)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(244, 86, 41)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Very High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Number of precipitation days exceeding 20 mm - 99th Percentile (1950-2019)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_99th_1950-2019_classes_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the extreme rainfall risk category a across Italy, based on the 99th percentile of the number of days per year when the daily rainfall amount exceeded 20mm using rainfall data from 1950 to 2019. In simple terms, it highlights areas at risk of experiencing frequent heavy rainfall days each year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_no_days_gt_20mm_99th_1950-2019_classes_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 183, 81)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(244, 86, 41)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Very High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 5 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_5_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on daily rainfall amount (mm) expected for a 5-year return period, meaning there is a 20% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_5_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 204, 92)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(240, 59, 32)",
+            "label": "Very High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Extreme High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 10 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_10_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on daily rainfall amount (mm) expected for a 10-year return period, meaning there is a 10% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_10_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 204, 92)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(240, 59, 32)",
+            "label": "Very High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Extreme High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 20 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_20_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on daily rainfall amount (mm) expected for a 20-year return period, meaning there is a 5% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_20_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 204, 92)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(240, 59, 32)",
+            "label": "Very High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Extreme High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 50 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_50_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category within a 100m buffer, based on daily rainfall amount (mm) expected for a 50-year return period, meaning there is a 2% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_50_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 204, 92)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(240, 59, 32)",
+            "label": "Very High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Extreme High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Risk of Daily Precepitation - 100 Years Return Period",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_100_EPSG3857.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer shows the risk category  across Italy, based on daily rainfall amount (mm) expected for a 100-year return period, meaning there is a 1% chance of exceeding a predefined rainfall amount in any given year.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/Dilation_NB_max-1day_return_period_1950-2019_classes_return_period_100_EPSG3857.tif",
+        "attribution": {
+          "text": "Extreme precipitation risk indicators for Europe and European cities from 1950 to 2019. This dataset was produced on behalf of the Copernicus Climate Change Service.",
+          "url": "https://cds.climate.copernicus.eu/datasets/sis-european-risk-extreme-precipitation-indicators?tab=overview"
+        },
+        "categories": [
+          {
+            "color": "rgb(255, 255, 178)",
+            "label": "Low Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(254, 204, 92)",
+            "label": "Medium Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 141, 60)",
+            "label": "High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(240, 59, 32)",
+            "label": "Very High Risk",
+            "value": 0
+          },
+          {
+            "color": "rgb(189, 0, 38)",
+            "label": "Extreme High Risk",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Extreme Rainfall Risk Map - Frequency of High Daily Rainfall Events - Percentile Analysis ",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/risk_subsidence_lower0_veloc_reclas.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across Sicily, Italy. The analysis is based on ground motion velocity data provided by the European Ground Motion Service (EGMS).\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/risk_subsidence_lower0_veloc_reclas.tif",
+        "attribution": {
+          "text": "EGMS",
+          "url": "https://land.copernicus.eu/en/products/european-ground-motion-service"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/risk_landslides_lower0_veloc_reclas.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across Sicily, Italy. The analysis is based on ground motion velocity data provided by the European Ground Motion Service (EGMS).\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/risk_landslides_lower0_veloc_reclas.tif",
+        "attribution": {
+          "text": "EGMS",
+          "url": "https://land.copernicus.eu/en/products/european-ground-motion-service"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 1)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb1_slope_le10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across small region (Region-1) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb1_slope_le10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 1)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb1_slope_gt10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across small region (Region-1) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb1_slope_gt10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 2)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb2_slope_le10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across small region (Region-2) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb2_slope_le10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 2)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb2_slope_gt10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes less than 10% across small region (Region-2) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb2_slope_gt10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Land Subsidence Risk Map - Sicily (Small Region 3)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb3_slope_le10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents land subsidence risk categories in areas with slopes less than 10% across small region (Region-3) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb3_slope_le10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Landslides Risk Map - Sicily  (Small Region 3)",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb3_slope_gt10_reclas.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "The layer represents landslides risk categories in areas with slopes more than 10% across small region (Region-3) in Sicily, Italy. The analysis is based on ground velocity and displacement time series derived from InSAR processing of six years of Sentinel-1 data specifically over this area.\nDownload: https://storage.googleapis.com/eo_best_practices_2023/EOtransportation/velocity_3857_pb3_slope_gt10_reclas.tiff",
+        "attribution": {
+          "text": "Copernicus Sentinel-1",
+          "url": "https://sentiwiki.copernicus.eu/web/sentinel-1"
+        },
+        "categories": [
+          {
+            "color": "rgb(171, 221, 164)",
+            "label": "0",
+            "value": 0
+          },
+          {
+            "color": "rgb(253, 174, 97)",
+            "label": "1",
+            "value": 0
+          },
+          {
+            "color": "rgb(215, 25, 28)",
+            "label": "2",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Ground Movement Risk Map - Seelcted Regions in Sicily",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true
+          }
+        }
+      }
+    }
+  ]
+}
